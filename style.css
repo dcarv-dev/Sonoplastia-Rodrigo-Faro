@@ -1,0 +1,75 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+ 
+#banner {
+    transition: 400ms;
+    display: inline-block;
+    margin: 0 auto;
+    width: 30%;
+    
+}
+
+#banner:hover {
+    opacity: 70%;
+}
+
+.teclado {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    background: linear-gradient(to bottom, blueviolet 25%, purple 100%);
+    box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+    border-radius: 30px;
+}
+
+.tecla {
+    background-color: white;
+    border-radius: 60px;
+    box-shadow: 3px 3px 0 gray;
+    color: blueviolet;
+    cursor: pointer;
+    height: 90px;
+    font-size: 0.9em;
+    
+    line-height: 90px;
+    text-align: center;
+    width: 120px;
+}
+
+.tecla.ativa,
+.tecla:active {
+    background-color: purple;
+    border: 4px solid purple;
+    box-shadow: 3px 3px 0 blueviolet inset;
+    color: white;
+    outline: none; 
+}
+
+.tecla.focus,
+.tecla:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px white;
+}
+
+.tecla.active:focus,
+.tecla:active:focus {
+    box-shadow: 3px 3px 0 blueviolet inset, 1px 1px 10px white;
+}
+
+footer {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 25px;
+    padding: 10px;
+}
